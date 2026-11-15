@@ -1,0 +1,144 @@
+@font-face {
+	font-family: "Play";
+	src: url("../fonts/play-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Play";
+	src: url("../fonts/play-bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+.social-icon {
+	width: 30px;
+	height: 30px;
+}
+
+
+
+body {
+	background-color: black;
+	color: #d9d9d9;
+	font-family: "Play", Helvetica, sans-serif;
+	padding: 0 18rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+header {
+	background-color: #121217;
+	padding: 0.5rem 2rem;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	gap: 1rem;
+}
+
+.quadrant-grid {
+	display: grid;
+	background-color: #121217;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 250px 250px;
+	gap: 1rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.quadrant-grid section {
+	border: 1px solid #40404a;
+	padding: 0.5rem;
+}
+
+.quadrant-grid h3 {
+	margin-bottom: 0.5rem;
+}
+
+#hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-color: #121217;
+	padding: 1.5rem;
+	border-top: 1px solid #40404a;
+	border-bottom: 1px solid #40404a;
+	height: 300px;
+}
+
+footer {
+	border-top: 1px solid #40404a;
+	padding: 2rem 0 1rem 1rem;
+	background-color: #121217;
+	font-size: 0.85rem;
+}
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: 2fr 3fr 1.5fr;
+	gap: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+}
+
+.footer-grid ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	gap: 0.5rem;
+}
+
+.footer-grid section {
+	border-left: 1px solid white;
+	padding-left: 1.5rem;
+}
+
+.footer-grid section:nth-child(2) {
+	justify-self: end;
+}
+
+.footer-grid section:last-child {
+	justify-self: end;
+}
+
+#footer-icons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+#footer-copy {	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
