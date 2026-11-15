@@ -17,7 +17,7 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: clamp(2.4rem, 5vw, 4rem);
 }
 
 html, body {
@@ -29,49 +29,86 @@ html, body {
 	height: 30px;
 }
 
-
-
 body {
 	background-color: black;
 	color: #d9d9d9;
 	font-family: "Play", Helvetica, sans-serif;
-	padding: 0 18rem;
+	padding: 0 1rem;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	box-sizing: border-box;
 }
 
 main {
 	flex: 1;
 }
 
+/* ========== Header ========== */
 header {
 	background-color: #121217;
-	padding: 0.5rem 2rem;
+	padding: 0.5rem 1rem;
 }
 
 header nav {
-	display: flex;
-	justify-content: space-between;
+	width: 100%;
 }
 
-header nav ul {
+.header-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	align-items: center;
+}
+
+#logo-button,
+#menu-list,
+#menu-socials {
+	display: flex;
+	align-items: center;
+}
+
+#logo-button a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#logo-button p {
+	margin: 0;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+#menu-list ul,
+#menu-socials ul {
 	display: flex;
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	gap: 1rem;
+	flex-wrap: wrap;
 }
 
+/* ========== Hero ========== */
+#hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-color: #121217;
+	padding: 1.5rem;
+	border-top: 1px solid #40404a;
+	border-bottom: 1px solid #40404a;
+	min-height: 220px;
+}
+
+/* ========== Quadrant grid ========== */
 .quadrant-grid {
 	display: grid;
 	background-color: #121217;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 250px 250px;
+	grid-template-columns: 1fr;
+	grid-auto-rows: minmax(200px, auto);
 	gap: 1rem;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding: 1.5rem 1rem;
 }
 
 .quadrant-grid section {
@@ -83,17 +120,7 @@ header nav ul {
 	margin-bottom: 0.5rem;
 }
 
-#hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	background-color: #121217;
-	padding: 1.5rem;
-	border-top: 1px solid #40404a;
-	border-bottom: 1px solid #40404a;
-	height: 300px;
-}
-
+/* ========== Footer ========== */
 footer {
 	border-top: 1px solid #40404a;
 	padding: 2rem 0 1rem 1rem;
@@ -103,11 +130,9 @@ footer {
 
 .footer-grid {
 	display: grid;
-	grid-template-columns: 2fr 3fr 1.5fr;
-	gap: 1rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 1rem;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	padding: 1rem;
 }
 
 .footer-grid ul {
@@ -115,19 +140,12 @@ footer {
 	list-style: none;
 	padding: 0;
 	gap: 0.5rem;
+	flex-wrap: wrap;
 }
 
 .footer-grid section {
-	border-left: 1px solid white;
-	padding-left: 1.5rem;
-}
-
-.footer-grid section:nth-child(2) {
-	justify-self: end;
-}
-
-.footer-grid section:last-child {
-	justify-self: end;
+	border-left: none;
+	padding-left: 0;
 }
 
 #footer-icons {
@@ -135,10 +153,97 @@ footer {
 	flex-direction: row;
 	align-items: center;
 	gap: 0.5rem;
+	flex-wrap: wrap;
 }
 
-#footer-copy {	
+#footer-copy {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+
+/* ========== Media queries ========== */
+
+/* Tablet and up */
+@media (min-width: 700px) {
+	body {
+		padding: 0 4rem;
+	}
+
+	header {
+		padding: 0.5rem 2rem;
+	}
+
+	.header-grid {
+		grid-template-columns: auto 1fr auto;
+		gap: 1.5rem;
+	}
+
+	#menu-list {
+		border-left: 1px solid white;
+		padding-left: 1.5rem;
+	}
+
+	#menu-socials {
+		justify-self: end;
+	}
+
+	.quadrant-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 250px 250px;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	#hero {
+		min-height: 300px;
+		height: 300px;
+	}
+}
+
+/* Larger screens — full header/footer column treatment */
+@media (min-width: 1000px) {
+	.header-grid {
+		grid-template-columns: auto 1fr auto;
+		gap: 1rem;
+	}
+
+	#menu-list {
+		border-left: 1px solid white;
+		padding-left: 1.5rem;
+	}
+
+	#menu-socials {
+		padding-left: 1.5rem;
+		justify-self: end;
+	}
+
+	.footer-grid {
+		grid-template-columns: 2fr 3fr 1.5fr;
+		gap: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.footer-grid section {
+		border-left: 1px solid white;
+		padding-left: 1.5rem;
+	}
+
+	.footer-grid section:nth-child(2),
+	.footer-grid section:last-child {
+		justify-self: end;
+	}
+}
+
+/* Wide screens — original large side padding */
+@media (min-width: 1400px) {
+	body {
+		padding: 0 18rem;
+	}
+
+	header {
+		padding: 0.5rem 2rem;
+	}
 }
