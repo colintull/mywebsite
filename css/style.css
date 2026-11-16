@@ -113,6 +113,10 @@ header nav {
 	min-height: 220px;
 }
 
+#hero h2 {
+	font-weight: normal;
+}
+
 #about-hero {	
 	display: flex;
 	flex-direction: column;
@@ -125,6 +129,7 @@ header nav {
 
 #about-hero h2 {
 	color: #31e8b6;
+	font-weight: normal;
 }
 
 /* ========== Quadrant grid ========== */
