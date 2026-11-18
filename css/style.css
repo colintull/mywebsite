@@ -4,93 +4,81 @@
 	font-weight: 400;
 	font-style: normal;
 }
-
 a {
 	color: inherit;
 	text-decoration: none;
 }
-
 @font-face {
 	font-family: "Play";
 	src: url("../fonts/play-bold.woff2") format("woff2");
 	font-weight: 700;
 	font-style: normal;
 }
-
 h1, h2, h3 {
 	margin: 0;
 }
-
 h1 {
 	font-size: clamp(2.4rem, 5vw, 4rem);
 }
-
 html, body {
 	min-height: 100%;
+	margin: 0;
 }
-
 .social-icon {
 	width: 30px;
 	height: 30px;
 }
-
 body {
 	background-color: black;
 	color: #d9d9d9;
 	font-family: "Play", Helvetica, sans-serif;
-	padding: 0 1rem;
+	padding: 0; /* full width on mobile */
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
 }
-
 main {
 	flex: 1;
+	width: 100%;
 }
-
 /* ========== Header ========== */
 header {
 	background-color: #121217;
 	padding: 0.5rem 1rem;
+	width: 100%;
+	box-sizing: border-box;
 }
-
 .active-page {
 	color: #31e8b6;
 	text-decoration-line: underline;
 	text-underline-offset: 6px;
 	text-decoration-thickness: 3px;
 }
-
 header nav {
 	width: 100%;
 }
-
 .header-grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1rem;
 	align-items: center;
 }
-
 #logo-button,
 #menu-list,
 #menu-socials {
 	display: flex;
 	align-items: center;
 }
-
 #logo-button a {
 	text-decoration: none;
 	color: inherit;
 }
-
 #logo-button p {
 	margin: 0;
 	font-weight: 700;
 	font-size: 1.1rem;
 }
-
 #menu-list ul,
 #menu-socials ul {
 	display: flex;
@@ -100,7 +88,6 @@ header nav {
 	gap: 1rem;
 	flex-wrap: wrap;
 }
-
 /* ========== Hero ========== */
 #hero {
 	display: flex;
@@ -111,12 +98,12 @@ header nav {
 	border-top: 1px solid #40404a;
 	border-bottom: 1px solid #40404a;
 	min-height: 220px;
+	width: 100%;
+	box-sizing: border-box;
 }
-
 #hero h2 {
 	font-weight: normal;
 }
-
 #about-hero {	
 	display: flex;
 	flex-direction: column;
@@ -125,13 +112,13 @@ header nav {
 	padding: 1.5rem;
 	border-top: 1px solid #40404a;
 	border-bottom: 1px solid #40404a;
+	width: 100%;
+	box-sizing: border-box;
 }
-
 #about-hero h2 {
 	color: #31e8b6;
 	font-weight: normal;
 }
-
 /* ========== Quadrant grid ========== */
 .quadrant-grid {
 	display: grid;
@@ -140,32 +127,31 @@ header nav {
 	grid-auto-rows: minmax(200px, auto);
 	gap: 1rem;
 	padding: 1.5rem 1rem;
+	width: 100%;
+	box-sizing: border-box;
 }
-
 .quadrant-grid section {
 	border: 1px solid #40404a;
 	padding: 0.5rem;
 }
-
 .quadrant-grid h3 {
 	margin-bottom: 0.5rem;
 }
-
 /* ========== Footer ========== */
 footer {
 	border-top: 1px solid #40404a;
-	padding: 1rem 0 1rem 1rem;
+	padding: 1rem;
 	background-color: #121217;
 	font-size: 0.85rem;
+	width: 100%;
+	box-sizing: border-box;
 }
-
 .footer-grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1.5rem;
-	padding: 1rem;
+	padding: 0;
 }
-
 .footer-grid ul {
 	display: flex;
 	list-style: none;
@@ -173,12 +159,10 @@ footer {
 	gap: 0.5rem;
 	flex-wrap: wrap;
 }
-
 .footer-grid section {
 	border-left: none;
 	padding-left: 0;
 }
-
 #footer-icons {
 	display: flex;
 	flex-direction: row;
@@ -186,73 +170,59 @@ footer {
 	gap: 0.5rem;
 	flex-wrap: wrap;
 }
-
 #footer-copy {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-
 /* ========== Media queries ========== */
-
-/* Tablet and up */
+/* Tablet and up — restore side padding */
 @media (min-width: 700px) {
 	body {
 		padding: 0 4rem;
 	}
-
 	header {
 		padding: 0.5rem 2rem;
 	}
-
 	.header-grid {
 		grid-template-columns: auto 1fr auto;
 		gap: 1.5rem;
 	}
-
 	#menu-list {
 		border-left: 1px solid white;
 		padding-left: 1.5rem;
 	}
-
 	#menu-socials {
 		justify-self: end;
 	}
-
 	.quadrant-grid {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 250px 250px;
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
-
 	#hero {
 		min-height: 300px;
 		height: 300px;
 	}
-
 	#about-hero {
-		min-height: 300px
+		min-height: 300px;
 	}
 }
-
 /* Larger screens — full header/footer column treatment */
 @media (min-width: 1000px) {
 	.header-grid {
 		grid-template-columns: auto 1fr auto;
 		gap: 1rem;
 	}
-
 	#menu-list {
 		border-left: 1px solid white;
 		padding-left: 1.5rem;
 	}
-
 	#menu-socials {
 		padding-left: 1.5rem;
 		justify-self: end;
 	}
-
 	.footer-grid {
 		grid-template-columns: 2fr 3fr 1.5fr;
 		gap: 1rem;
@@ -260,24 +230,20 @@ footer {
 		padding-right: 1rem;
 		padding-bottom: 1rem;
 	}
-
 	.footer-grid section {
 		border-left: 1px solid white;
 		padding-left: 1.5rem;
 	}
-
 	.footer-grid section:nth-child(2),
 	.footer-grid section:last-child {
 		justify-self: end;
 	}
 }
-
 /* Wide screens — original large side padding */
 @media (min-width: 1400px) {
 	body {
 		padding: 0 18rem;
 	}
-
 	header {
 		padding: 0.5rem 2rem;
 	}
