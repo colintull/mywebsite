@@ -52,6 +52,15 @@ main {
 	color: #gray;
 	text-decoration: underline;
 }
+
+#projects-list a{
+	color: #31e8b6;
+	text-decoration: underline;
+}
+
+#projects-list ul {
+	list-style: none;
+}
 /* ========== Header ========== */
 header {
 	background-color: #121217;
