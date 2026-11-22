@@ -2,6 +2,8 @@
 title: I Think Tech is My Thing
 date: 2026-11-22
 category: Personal
+layout: default
+permalink: /journal/1-i-think-tech-is-my-thing/
 tags:
  - linux
  - tech
