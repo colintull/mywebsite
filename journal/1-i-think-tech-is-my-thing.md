@@ -14,7 +14,7 @@ description: An introduction to me and this website.
 
 
 
-# I think tech is my thing.
+# I Think Tech is My Thing.
 
 I have friends with some very interesting hobbies. I have a friend who is a great wood worker and leather worker. I have a friend who restores pinball machines. One of my friends has a huge arsenal of guns and knows everything about them. I have friends who are great cooks, who make their own mead. So many people I know have their thing.
 
