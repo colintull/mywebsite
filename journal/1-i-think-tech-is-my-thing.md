@@ -1,8 +1,22 @@
-I think tech is my thing.
+---
+title: I Think Tech is My Thing
+date: 2026-11-22
+category: Personal
+tags:
+ - linux
+ - tech
+ - learning 
+ - personal
+description: An introduction to me and this website.
+---
+
+
+
+# I think tech is my thing.
 
 I have friends with some very interesting hobbies. I have a friend who is a great wood worker and leather worker. I have a friend who restores pinball machines. One of my friends has a huge arsenal of guns and knows everything about them. I have friends who are great cooks, who make their own mead. So many people I know have their thing.
 
-I have had multiple things throughout my life. I loved sports growing up. Music has been and still is something I love doing. I've tried things like gardening and cooking and acting. 
+I have had multiple things throughout my life. I loved sports growing up. [Music](..music.html) has been and still is something I love doing. I've tried things like gardening and cooking and acting. 
 
 I always come back to computers.
 
@@ -16,4 +30,4 @@ I want to document my journey to learning computers and everything related to th
 
 Thanks for visiting this page and taking the time to read this.
 
-This is going to be a long journey. Maybe some day soon my friends will say "My friend Colin, hes really great with tech and computers. That's his thing."
+This is going to be a long journey. Maybe some day soon my friends will say "My friend Colin, he's really great with tech and computers. That's his thing."
